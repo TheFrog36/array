@@ -55,3 +55,36 @@ function sumAll(my_array){
     return tot
 }
 console.log(sumAll(array_of_numbers))
+
+const array_di_stringhe = ['mela', 'ananas', 'arancia', 'mirtillo'];
+console.log(array_di_stringhe);
+function array_to_uppercase(my_array){
+    const uppercase_array = []
+    for (const iterator of my_array) {
+        uppercase_array.push(iterator.toUpperCase())
+    }
+    return uppercase_array;
+}
+console.log(array_to_uppercase(array_di_stringhe))
+
+const array_of_array = [[2, 6, 4], [3, 7, 5], [5, 9, 7]]
+
+for(let i = 0; i < array_of_array.length; i++){
+    for(let j = 0; j < array_of_array.length; j++){
+        console.log(array_of_array[i][j])
+    }
+}
+
+function add_one_2d(my_array){
+    const new_array = [];
+    for (const riga of my_array) {
+        const new_line = []
+        for (const item of riga) {
+            new_line.push(item + 1)
+        }
+        new_array.push(new_line)
+    }
+    return new_array
+}
+
+console.log(add_one_2d(array_of_array))
